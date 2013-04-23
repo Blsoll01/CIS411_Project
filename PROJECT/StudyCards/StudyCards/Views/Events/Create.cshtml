@@ -1,0 +1,68 @@
+﻿@model StudyCards.Models.Event
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Event</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventTitle)
+            @Html.ValidationMessageFor(model => model.EventTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventTime)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventTime)
+            @Html.ValidationMessageFor(model => model.EventTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventDesc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventDesc)
+            @Html.ValidationMessageFor(model => model.EventDesc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EventLocation)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EventLocation)
+            @Html.ValidationMessageFor(model => model.EventLocation)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CourseID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CourseID)
+            @Html.ValidationMessageFor(model => model.CourseID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

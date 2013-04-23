@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p>
+        Study Cards was developed by Brandon Solley, William Elmore, Scott Williamson, Kevin Malloy, and Udyani Patel, students of Wesley Resiz's CIS 411 class at the University of Louisville.  
+    </p>
+
+    <p>
+        Study Cards was created in order for student of the CIS depart at the University of Louisville, post and find study groups for exam prep, homwork help, or project groups.  Instead of having to
+        call people and text, student can post up "Study group Event" on the web, providing a central location on the web for study group informantion.   
+    </p>
+
+    <p>
+        Students can also search for study groups by the classes Course ID, in order to filter classes specific for that student.
+    </p>
+</article>
+
+<aside>
+    <h3>Site Map:</h3>
+
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

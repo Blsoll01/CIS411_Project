@@ -1,0 +1,57 @@
+﻿@model IEnumerable<StudyCards.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentFName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentLName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentPass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentLName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentPass)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
+        </td>
+    </tr>
+}
+
+</table>
