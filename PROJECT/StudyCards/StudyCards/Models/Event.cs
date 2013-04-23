@@ -24,8 +24,5 @@ namespace StudyCards.Models
 
         public DbSet<Course> Courses { get; set; }
 
-        //public DbSet<Event_Registry> Event_Registry { get; set; }
-
-        //public DbSet<Registry> Registries { get; set; }
     }
 }

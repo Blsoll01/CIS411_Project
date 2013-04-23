@@ -22,7 +22,7 @@ namespace StudyCards.Controllers
         //    return View(db.Events.ToList());
         //}
 
-        // Searching Portion
+        // Search logic
         public ActionResult Index(string SearchParam)
         {
             Regex regex = new Regex(@"^[1-9][0-9]*$");
