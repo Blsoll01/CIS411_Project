@@ -1,0 +1,50 @@
+﻿@model StudyCards.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentFName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentFName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentLName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentLName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentPhone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentPhone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentEmail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentEmail)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.StudentPass)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StudentPass)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.StudentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,50 @@
+﻿@model StudyCards.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Event</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EventTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EventTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EventDesc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventDesc)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EventLocation)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EventLocation)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CourseID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CourseID)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.EventID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

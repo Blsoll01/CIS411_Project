@@ -1,0 +1,65 @@
+﻿@model IEnumerable<StudyCards.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Current Study Groups</h2>
+<form action="../Events/Index" method="get">
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    @*// Search bar and button*@
+    <input type="text" name="SearchParam" />
+    <input type="submit" value="Search by CourseId" />
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EventTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EventLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseID)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseID)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Edit", "Edit", new { id = item.EventID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.EventID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.EventID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</form>

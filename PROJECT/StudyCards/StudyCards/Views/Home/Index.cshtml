@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Study Cards";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                Studying for an exam, midterm, or final by yourself?? 
+                <br />
+                Ain't Nobody got time for that!
+            </p>
+        </div>
+    </section>
+}
+
+<div class="round">
+<input class="defaultBtn" id="btnLogIn" type="button" value="Log In"
+    onclick="window.location = '../Account/Login';" />
+<br />
+<br />
+<input class="defaultBtn" id="btnEvents" type="button" value="Find a Study Group!"
+    onclick="window.location = '../Events';" />
+<br />
+<br />
+<a href="https://blackboard.louisville.edu/webapps/portal/frameset.jsp"><img src="../Images/blackboard_Icon.png"
+  alt="UofL Blackboard Portal"
+  width="96" height="96" z-index:2 border="0" />
+</a>
+
+</div>
+
